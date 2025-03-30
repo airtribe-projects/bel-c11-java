@@ -16,5 +16,4 @@ public class HelloWorldController {
   public String helloFunc() {
     return "Hello World from learner management system";
   }
-
 }

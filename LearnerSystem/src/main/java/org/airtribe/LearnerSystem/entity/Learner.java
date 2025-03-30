@@ -1,13 +1,17 @@
 package org.airtribe.LearnerSystem.entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 
 @Entity
 public class Learner {
 
   @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
   private Long learnerId;
   private String name;
   private String username;
@@ -16,7 +20,7 @@ public class Learner {
   public Learner() {
   }
 
-  public Learner(Long learnerId, String name, String username, String password, String course, String email) {
+  public Learner(Long learnerId, String name, String username, String password) {
     this.learnerId = learnerId;
     this.name = name;
     this.username = username;
